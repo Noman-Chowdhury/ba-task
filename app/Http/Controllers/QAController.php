@@ -39,7 +39,7 @@ class QAController extends Controller
         $ip = \request()->ip;
         if (!$ip or strlen(trim($ip)) == 0) {
             echo 'No IP address given <br>';
-            echo 'pass the ip_address in url. example: {base_url}/solution/3?ip=WHATEVER_IP';
+            echo '<p style="color: red">pass the ip address in url. example: {base_url}/solution/3?ip=192.168.0.1</p>';
             return false;
         }
         $ip = trim($ip);
